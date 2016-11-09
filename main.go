@@ -48,6 +48,7 @@ func updateEcr(vargs Rancher) error {
 
 	resp, err := ecrClient.GetAuthorizationToken(&ecr.GetAuthorizationTokenInput{})
 	if err != nil {
+		fmt.Printf("Error while geting Auth Toke\n", err)
 		return err
 	}
 
